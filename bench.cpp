@@ -12,7 +12,7 @@ int main(){
 	ios_base::sync_with_stdio(0);
 
 	srand(time(nullptr));
-	set <int> st;
+	multiset <int> st;
 
 	clock_t begin = clock();
 	for(int i=0; i<tc; i++){
@@ -51,10 +51,13 @@ int main(){
 	end = clock();
 	cout << "CPP SET ERASE TIME OVER " << tc << " CASES: " << endl << fixed << double(end-begin) / CLOCKS_PER_SEC << endl;
 
+	cout << *rbt.find(123) << endl;
+
 	begin = clock();
 	for(int i=0; i<tc; i++){
 		rbt.remove(i);
 	}
+
 	end = clock();
 	cout << "RBT ERASE TIME OVER " << tc << " CASES: " << endl << fixed << double(end-begin) / CLOCKS_PER_SEC << endl;
 
